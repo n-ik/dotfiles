@@ -12,5 +12,5 @@ git clone git@github.com:n-ik/dotfiles.git ~/.dotfiles
 The following script will create the symlink to your home dofiles and move the old files in ~/.old_dotfiles
 
 ```bash
-bash ~/dotfiles/bootstrap.sh
+bash ~/.dotfiles/bootstrap.sh
 ```
