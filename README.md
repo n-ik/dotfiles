@@ -1,6 +1,6 @@
 #  Dotfiles
 My macOS / Linux / Bash on Windows dotfiles. 
-(at the moment ,only macOS was tested)
+(at the moment, only macOS was tested)
 
 ## Installation
 Clone the repository in your home directory
