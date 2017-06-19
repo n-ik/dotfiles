@@ -1,7 +1,7 @@
 # autoload -U add-zsh-hook
 autoload -Uz vcs_info
 
-# # enable VCS systems you use
+# Enable VCS systems you use
 zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:*:prompt:*' check-for-changes true
 
@@ -10,7 +10,7 @@ autoload -U promptinit
 promptinit
 
 # Look at http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Version-Control-Information
-# for mor options
+# for more options
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '*'   # display this when there are unstaged changes
 zstyle ':vcs_info:*' stagedstr '+'  # display this when there are staged changes

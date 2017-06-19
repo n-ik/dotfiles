@@ -11,7 +11,7 @@
     // specific settings file, for example, "Preferences (Linux).sublime-settings".
     // Because of this, setting them here will have no effect: you must set them
     // in your User File Preferences.
-    "font_face": "",
+    "font_face": "Consolas",
     "font_size": 12,
 
     // Valid options are "no_bold", "no_italic", "no_antialias", "gray_antialias",

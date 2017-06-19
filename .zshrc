@@ -1,7 +1,7 @@
 export ZSH=~/.zsh
 
-#environment paths
-export PATH=/usr/local/bin:$PATH
+# Environment paths
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # Load all of the config files in ~/.zsh that end in .zsh
 for config_file ($ZSH/*.zsh) source $config_file
@@ -16,4 +16,3 @@ fpath=(/usr/local/share/zsh/site-functions $fpath)
 autoload -U compinit
 compinit -i
 
-PATH=/usr/local/bin:/usr/local/sbin:$PATH

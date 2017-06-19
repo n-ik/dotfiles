@@ -42,3 +42,6 @@ set expandtab
 
 " Disable error bells
 set noerrorbells
+
+" Markdowm highlighting
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
