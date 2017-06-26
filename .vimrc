@@ -61,7 +61,7 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 set noerrorbells
 
 " GUI
-set guifont=Consolas:h10
+set guifont=Inconsolata:h10
 
 " Markdowm highlighting
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
