@@ -28,6 +28,11 @@ set noswapfile
 set nobackup
 set nowritebackup
 
+" Centralize undo history
+if exists("&undodir")
+    set undodir=~/.vim/undo
+endif
+
 " Set encoding
 set encoding=utf-8
 
