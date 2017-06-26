@@ -1,16 +1,3 @@
-# Aliases for MacOS
-if [ "$(uname -s)" = "Darwin" ]; then
-  alias notes='cd ~/Documents/Notes'
-fi
-
-# Aliases for bash on Windows
-if [ -d "/mnt/c" ]; then
-  alias standup='vim ~/Notes/Work/standup.md'
-  alias scratch='vim ~/Notes/Work/scratch.md'
-  alias notes='cd ~/Notes/Work/Notes'
-  alias workdir='cd /mnt/c/work_java/'
-fi
-
 # Detect which `ls` flavor is in use
 if [ -d /mnt/c ]; then # WindowsBash ´ls´
     colorflag="--color=auto"
