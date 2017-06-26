@@ -1,6 +1,9 @@
 " Use the Dark theme
 set background=dark
 
+" Colorscheme see https://github.com/chriskempson/tomorrow-theme
+color Tomorrow-Night
+
 " Make Vim more useful
 set nocompatible
 
@@ -39,6 +42,15 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+
+" Strip trailing whitespaces on each save
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " Disable error bells
 set noerrorbells
