@@ -1,8 +1,23 @@
+" Set the runtime path to include Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+
+" Plugins
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+call vundle#end()
+
 " Use the Dark theme
 set background=dark
 
 " Colorscheme see https://github.com/chriskempson/tomorrow-theme
 color Tomorrow-Night
+
+" Airline Theme
+let g:airline_theme='tomorrow'
+set laststatus=2
 
 " Make Vim more useful
 set nocompatible
@@ -62,6 +77,10 @@ set noerrorbells
 
 " GUI
 set guifont=Inconsolata:h10
+
+" NERDTree configuration
+let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
+map <Leader>n :NERDTreeToggle<CR>
 
 " Markdowm highlighting
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
