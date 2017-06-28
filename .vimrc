@@ -84,3 +84,5 @@ map <Leader>n :NERDTreeToggle<CR>
 
 " Markdowm highlighting
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+" Jenkinsfile highlighting
+au BufNewFile,BufFilePre,BufRead Jenkinsfile set filetype=groovy
