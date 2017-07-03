@@ -71,9 +71,9 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 " Allow backspace in insert mode
 set backspace=indent,eol,start
 
-" Highlight characters behind the 80 chars margin
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+" Highlight character on the 80 chars margin
+highlight ColorColumn ctermbg=lightblue guibg=lightblue
+call matchadd('ColorColumn', '\%81v', 100)
 
 " Airline Theme
 let g:airline_theme='tomorrow'
