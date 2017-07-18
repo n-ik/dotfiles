@@ -1,0 +1,5 @@
+# Make tabs as wide as two spaces
+set tabsize 2
+
+# On pressing tab, insert spaces
+set tabstospaces
