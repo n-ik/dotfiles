@@ -17,6 +17,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'junegunn/goyo.vim'
+Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 
 " Enable syntax highlighting
@@ -83,6 +84,9 @@ set laststatus=2
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
+
+" Gitgutter Settings
+set updatetime=250
 
 " Markdowm highlighting
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
