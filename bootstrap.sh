@@ -24,7 +24,7 @@ for file in .{zshrc,zsh,tmux.conf,vimrc,nanorc}; do
     ln -s ~/.dotfiles/$file ~/$file;
 done;
 
-# Start zsh in bash on Windows 
+# Start zsh in bash on Windows
 if [ -d "/mnt/c" ]; then
   cat <<EOF > ~/.bashrc
   # Launch zsh
@@ -33,13 +33,3 @@ if [ -d "/mnt/c" ]; then
   fi
 EOF
 fi
-
-#Sublime Text
-## MacOS
-if [[ `uname` == 'Darwin' ]]; then
-  #ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
-  link "$HOME/.dotfiles/sublime/Packages/User/MacOSPreferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
-fi
-
-## Bash on Windows
-# mklink "C:\Users\%USERNAME%\AppData\Roaming\Sublime Text 3\Packages\User\Preferences.sublime-settings" "C:\Users\%USERNAME%\AppData\Local\lxss\home\%USERNAME%\.dotfiles\sublime\Packages\User\winPreferences.sublime-settings"
