@@ -73,9 +73,9 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 " Allow backspace in insert mode
 set backspace=indent,eol,start
 
-" Highlight character on the 80 chars margin
+" Highlight character on the 120 chars margin
 highlight ColorColumn ctermbg=lightblue guibg=lightblue
-call matchadd('ColorColumn', '\%81v', 100)
+call matchadd('ColorColumn', '\%121v', 100)
 
 " Airline Theme
 let g:airline_theme='tomorrow'
