@@ -1,0 +1,5 @@
+{
+    "editor.fontSize": 13,
+    "files.trimTrailingWhitespace": true,
+    "editor.rulers": [120]
+}
