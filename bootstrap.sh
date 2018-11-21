@@ -13,8 +13,8 @@ git config --global user.email $git_authoremail
 fi
 
 # Move old files to the backup folder
-if  [ -d "~./old_dotfiles" ]; then
-  rm -rf ./old_dotfiles
+if [ -d "$HOME/.old_dotfiles" ]; then
+  rm -rf ~/.old_dotfiles
 fi
 
 mkdir ~/.old_dotfiles
@@ -29,10 +29,10 @@ for file in {zshrc,zsh,tmux.conf,vimrc,nanorc,i3}; do
 done;
 
 # Copy .vim/colors folder (symlinking does not work)
-if  [ -d "~/.vim" ]; then
-  cp -R ~/.dotfiles/vim/colors ~/.vim/
+if  [ -d "$HOME/.vim" ]; then
+  cp -af ~/.dotfiles/vim/colors ~/.vim/colors
 else
-  cp -R  ~/.dotfiles/vim ~/.vim
+  cp -af ~/.dotfiles/vim ~/.vim
 fi
 
 # Start zsh in bash on Windows
