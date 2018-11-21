@@ -5,11 +5,23 @@ filetype off
 " Change mapleader
 let mapleader=","
 
-"" Use the OS clipboard by default
+" Use the OS clipboard by default
 set clipboard=unnamed
 
-"Set the runtime path to include Vundle
+
+"  Vundle (vim plugin manager) stuff "
 set rtp+=~/.vim/bundle/Vundle.vim
+
+" Automatically setting up vundle "
+let has_vundle=1
+if !filereadable($HOME."/.vim/bundle/Vundle.vim/README.md")
+    echo "Installing Vundle..."
+    echo ""
+    silent !mkdir -p $HOME/.vim/bundle
+    silent !git clone https://github.com/gmarik/Vundle.vim $HOME/.vim/bundle/Vundle.vim
+    let has_vundle=0
+endif
+
 " Plugins
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
@@ -19,6 +31,12 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'junegunn/goyo.vim'
 Plugin 'airblade/vim-gitgutter'
 call vundle#end()
+
+" Installing plugins the first time, quits when done
+if has_vundle == 0
+    :silent! PluginInstall
+    :qa
+endif
 
 " Enable syntax highlighting
 filetype plugin indent on
