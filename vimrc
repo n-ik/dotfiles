@@ -25,11 +25,12 @@ endif
 " Plugins
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
+Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'junegunn/goyo.vim'
 Plugin 'airblade/vim-gitgutter'
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 call vundle#end()
 
 " Installing plugins the first time, quits when done
@@ -47,6 +48,11 @@ set background=dark
 
 " Colorscheme see https://github.com/chriskempson/tomorrow-theme
 color Tomorrow-Night
+
+" Colorscheme for lightline
+let g:lightline = {
+      \ 'colorscheme': 'Tomorrow_Night',
+      \ }
 
 " Disable error bells
 set noerrorbells
@@ -95,13 +101,16 @@ set backspace=indent,eol,start
 highlight ColorColumn ctermbg=lightblue guibg=lightblue
 call matchadd('ColorColumn', '\%121v', 100)
 
-" Airline Theme
-let g:airline_theme='tomorrow'
-set laststatus=2
-
 " NERDTree configuration
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeQuitOnOpen = 1
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
+
+" Open NERDTree automatically when vim starts up on opening a directory
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
 " Gitgutter Settings
 set updatetime=250
@@ -110,3 +119,9 @@ set updatetime=250
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 " Jenkinsfile highlighting
 au BufNewFile,BufFilePre,BufRead Jenkinsfile set filetype=groovy
+
+" Window Navigation with Ctrl-[hjkl]
+noremap <C-J> <C-W>j
+noremap <C-K> <C-W>k
+noremap <C-H> <C-W>h
+noremap <C-L> <C-W>l
