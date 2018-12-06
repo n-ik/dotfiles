@@ -54,6 +54,9 @@ let g:lightline = {
       \ 'colorscheme': 'Tomorrow_Night',
       \ }
 
+" display the status-bar (always)
+set laststatus=2
+
 " Disable error bells
 set noerrorbells
 
