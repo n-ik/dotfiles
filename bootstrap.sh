@@ -13,12 +13,12 @@ git config --global user.email $git_authoremail
 fi
 
 # Remove old files
-for file in ~/.{zshrc,zsh,tmux.conf,vimrc,nanorc,i3,Xresources}; do
+for file in ~/.{zshrc,zsh,tmux.conf,vimrc,nanorc}; do
     rm -rf $file
 done;
 
 # Set symlinks to dofiles
-for file in {zshrc,zsh,tmux.conf,vimrc,nanorc,i3,Xresources}; do
+for file in {zshrc,zsh,tmux.conf,vimrc,nanorc}; do
     ln -s ~/.dotfiles/$file ~/.$file;
 done;
 
