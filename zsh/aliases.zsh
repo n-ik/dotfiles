@@ -30,3 +30,6 @@ alias week="date +%V"
 
 # Find Biggest Files and Directories
 alias findBig="find -type f -exec du -Sh {} + | sort -rh | head -n 10"
+
+# Notes
+alias notes="vim ~/.notes"
