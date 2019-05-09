@@ -24,13 +24,14 @@ endif
 
 " Plugins
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'itchyny/lightline.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'junegunn/goyo.vim'
-Plugin 'airblade/vim-gitgutter'
+Bundle 'gmarik/Vundle.vim'
+Bundle 'itchyny/lightline.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'Xuyuanp/nerdtree-git-plugin'
+Bundle 'junegunn/goyo.vim'
+Bundle 'airblade/vim-gitgutter'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Bundle "lepture/vim-jinja"
 call vundle#end()
 
 " Installing plugins the first time, quits when done
