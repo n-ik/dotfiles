@@ -13,3 +13,6 @@ The following script will create the symlinks to your home dofiles (The old file
 ```
 bash ~/.dotfiles/bootstrap.sh
 ```
+
+## Credits
+Inspired by [hukl](https://github.com/hukl/dotfiles)
